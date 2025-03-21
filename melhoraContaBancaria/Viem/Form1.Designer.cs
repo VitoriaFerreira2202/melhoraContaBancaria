@@ -30,28 +30,30 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblNomeTitula = new System.Windows.Forms.Label();
+            this.lblNumConta = new System.Windows.Forms.Label();
+            this.lblSaldo = new System.Windows.Forms.Label();
             this.txtNomeTitula = new System.Windows.Forms.TextBox();
             this.txtNumConta = new System.Windows.Forms.TextBox();
             this.txtSaldo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblResultado = new System.Windows.Forms.Label();
             this.txtSaldoResultado = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.lblSaldoPart2 = new System.Windows.Forms.Label();
+            this.checkBoxDepo = new System.Windows.Forms.CheckBox();
+            this.checkBoxSaque = new System.Windows.Forms.CheckBox();
             this.txtDeposito = new System.Windows.Forms.TextBox();
             this.txtSaque = new System.Windows.Forms.TextBox();
+            this.btnCalc = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(448, 152);
+            this.button1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(422, 152);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 38);
+            this.button1.Size = new System.Drawing.Size(189, 38);
             this.button1.TabIndex = 0;
             this.button1.Text = "PARA CONTINUA";
             this.button1.UseVisualStyleBackColor = true;
@@ -67,35 +69,35 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "CONTA BACARIA";
             // 
-            // label2
+            // lblNomeTitula
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 27);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "NOME DO TITULA:";
+            this.lblNomeTitula.AutoSize = true;
+            this.lblNomeTitula.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeTitula.Location = new System.Drawing.Point(12, 54);
+            this.lblNomeTitula.Name = "lblNomeTitula";
+            this.lblNomeTitula.Size = new System.Drawing.Size(245, 27);
+            this.lblNomeTitula.TabIndex = 2;
+            this.lblNomeTitula.Text = "NOME DO TITULA:";
             // 
-            // label3
+            // lblNumConta
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 108);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(279, 27);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "NUMERO DA CONTA:";
+            this.lblNumConta.AutoSize = true;
+            this.lblNumConta.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumConta.Location = new System.Drawing.Point(12, 108);
+            this.lblNumConta.Name = "lblNumConta";
+            this.lblNumConta.Size = new System.Drawing.Size(279, 27);
+            this.lblNumConta.TabIndex = 3;
+            this.lblNumConta.Text = "NUMERO DA CONTA:";
             // 
-            // label4
+            // lblSaldo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 163);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 27);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "SALDO:";
+            this.lblSaldo.AutoSize = true;
+            this.lblSaldo.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaldo.Location = new System.Drawing.Point(12, 163);
+            this.lblSaldo.Name = "lblSaldo";
+            this.lblSaldo.Size = new System.Drawing.Size(103, 27);
+            this.lblSaldo.TabIndex = 4;
+            this.lblSaldo.Text = "SALDO:";
             // 
             // txtNomeTitula
             // 
@@ -123,6 +125,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.groupBox1.Controls.Add(this.lblResultado);
             this.groupBox1.Location = new System.Drawing.Point(3, 223);
             this.groupBox1.Name = "groupBox1";
@@ -133,9 +136,10 @@
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
+            this.lblResultado.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.lblResultado.Location = new System.Drawing.Point(20, 16);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(9, 13);
+            this.lblResultado.Size = new System.Drawing.Size(12, 18);
             this.lblResultado.TabIndex = 0;
             this.lblResultado.Text = "l";
             // 
@@ -147,37 +151,39 @@
             this.txtSaldoResultado.Size = new System.Drawing.Size(199, 35);
             this.txtSaldoResultado.TabIndex = 10;
             // 
-            // label6
+            // lblSaldoPart2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 350);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 27);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "SALDO:";
+            this.lblSaldoPart2.AutoSize = true;
+            this.lblSaldoPart2.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaldoPart2.Location = new System.Drawing.Point(12, 350);
+            this.lblSaldoPart2.Name = "lblSaldoPart2";
+            this.lblSaldoPart2.Size = new System.Drawing.Size(103, 27);
+            this.lblSaldoPart2.TabIndex = 9;
+            this.lblSaldoPart2.Text = "SALDO:";
             // 
-            // checkBox1
+            // checkBoxDepo
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold);
-            this.checkBox1.Location = new System.Drawing.Point(17, 403);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(160, 31);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.Text = "DEPOSITO";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxDepo.AutoSize = true;
+            this.checkBoxDepo.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold);
+            this.checkBoxDepo.Location = new System.Drawing.Point(17, 403);
+            this.checkBoxDepo.Name = "checkBoxDepo";
+            this.checkBoxDepo.Size = new System.Drawing.Size(160, 31);
+            this.checkBoxDepo.TabIndex = 11;
+            this.checkBoxDepo.Text = "DEPOSITO";
+            this.checkBoxDepo.UseVisualStyleBackColor = true;
+            this.checkBoxDepo.CheckedChanged += new System.EventHandler(this.checkBoxDepo_CheckedChanged);
             // 
-            // checkBox2
+            // checkBoxSaque
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold);
-            this.checkBox2.Location = new System.Drawing.Point(17, 449);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(118, 31);
-            this.checkBox2.TabIndex = 12;
-            this.checkBox2.Text = "SAQUE";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxSaque.AutoSize = true;
+            this.checkBoxSaque.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold);
+            this.checkBoxSaque.Location = new System.Drawing.Point(17, 449);
+            this.checkBoxSaque.Name = "checkBoxSaque";
+            this.checkBoxSaque.Size = new System.Drawing.Size(118, 31);
+            this.checkBoxSaque.TabIndex = 12;
+            this.checkBoxSaque.Text = "SAQUE";
+            this.checkBoxSaque.UseVisualStyleBackColor = true;
+            this.checkBoxSaque.CheckedChanged += new System.EventHandler(this.checkBoxSaque_CheckedChanged);
             // 
             // txtDeposito
             // 
@@ -195,24 +201,36 @@
             this.txtSaque.Size = new System.Drawing.Size(199, 35);
             this.txtSaque.TabIndex = 14;
             // 
+            // btnCalc
+            // 
+            this.btnCalc.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCalc.Location = new System.Drawing.Point(436, 446);
+            this.btnCalc.Name = "btnCalc";
+            this.btnCalc.Size = new System.Drawing.Size(149, 40);
+            this.btnCalc.TabIndex = 15;
+            this.btnCalc.Text = "CALCULAR";
+            this.btnCalc.UseVisualStyleBackColor = true;
+            this.btnCalc.Click += new System.EventHandler(this.btnCalc_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 595);
+            this.Controls.Add(this.btnCalc);
             this.Controls.Add(this.txtSaque);
             this.Controls.Add(this.txtDeposito);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxSaque);
+            this.Controls.Add(this.checkBoxDepo);
             this.Controls.Add(this.txtSaldoResultado);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblSaldoPart2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtSaldo);
             this.Controls.Add(this.txtNumConta);
             this.Controls.Add(this.txtNomeTitula);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblSaldo);
+            this.Controls.Add(this.lblNumConta);
+            this.Controls.Add(this.lblNomeTitula);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
@@ -228,20 +246,21 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblNomeTitula;
+        private System.Windows.Forms.Label lblNumConta;
+        private System.Windows.Forms.Label lblSaldo;
         private System.Windows.Forms.TextBox txtNomeTitula;
         private System.Windows.Forms.TextBox txtNumConta;
         private System.Windows.Forms.TextBox txtSaldo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.TextBox txtSaldoResultado;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Label lblSaldoPart2;
+        private System.Windows.Forms.CheckBox checkBoxDepo;
+        private System.Windows.Forms.CheckBox checkBoxSaque;
         private System.Windows.Forms.TextBox txtDeposito;
         private System.Windows.Forms.TextBox txtSaque;
+        private System.Windows.Forms.Button btnCalc;
     }
 }
 

@@ -23,13 +23,15 @@ namespace melhoraContaBancaria.Model
                        
         }
 
-        public  double Deposito(double ValorDep) 
+        public  string Deposito(string ValorDep) 
         {
-            return Math.Abs(this.Saldo + ValorDep);
+            var Valorconve = UtilClasse.ChecaoValorDouble(ValorDep);
+            return Math.Abs(this.Saldo + Valorconve).ToString();
         }
-        public double Saque(double ValorSaque) 
-        {             
-            return Math.Abs(Saldo - ValorSaque);
+        public string Saque(string ValorSaque) 
+        {
+            var Valorconve = UtilClasse.ChecaoValorDouble(ValorSaque);
+            return Math.Abs(this.Saldo - Valorconve).ToString();
         }
     }
 }

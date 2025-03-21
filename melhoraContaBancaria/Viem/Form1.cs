@@ -16,19 +16,80 @@ namespace melhoraContaBancaria
         public Form1()
         {
             InitializeComponent();
+            Desabilita();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                controleconta = new ControleConta(txtNOme...); 
+                controleconta = new ControleConta(txtNomeTitula.Text,txtNumConta.Text,txtSaldo.Text);
+                lblResultado.Text = PreparaResul(txtSaldo.Text);
+                txtSaldoResultado.Text = txtSaldo.Text;
+                Abilita();
             }
-             catch 
-              {
-                MessageBox.Show("OS VALOR DE QUE VCOCE INSERIU","ERROU" );
-                return;
+             
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+            
+            return;
               }
+            
+        }
+        private string PreparaResul(string saldo) 
+        {
+            return $"NOME: {txtNomeTitula.Text}\nNUMERO DA CONTA: {txtNumConta.Text}\nSALDO:{saldo:C2}";
+        }
+        private void checkBoxDepo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxDepo.Checked)
+            {
+                checkBoxSaque.Checked = false;
+            }
+        }
+
+        private void checkBoxSaque_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSaque.Checked)
+            {
+                checkBoxDepo.Checked = false;
+            }
+        }
+
+        
+        public void Desabilita() 
+        { 
+            txtSaldoResultado.Enabled = false;
+            txtSaque.Enabled = false;
+            txtDeposito.Enabled = false;
+            checkBoxDepo.Enabled = false;
+            checkBoxSaque.Enabled = false;
+        }
+
+        public void Abilita() 
+        {
+            txtSaldoResultado.Enabled = true;
+            txtSaque.Enabled = true;
+            txtDeposito.Enabled = true;
+            checkBoxDepo.Enabled = true;
+            checkBoxSaque.Enabled = true;
+        }
+
+        private void btnCalc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                controleconta.CalcSaque(txtSaque.Text);
+                controleconta.CalcDepo(txtDeposito.Text);
+            }
+
+
+            catch (ArgumentException ex) 
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
         }
     }
 }
