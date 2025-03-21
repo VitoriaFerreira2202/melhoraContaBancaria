@@ -33,17 +33,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNomeTitula = new System.Windows.Forms.TextBox();
+            this.txtNumConta = new System.Windows.Forms.TextBox();
+            this.txtSaldo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.lblResultado = new System.Windows.Forms.Label();
+            this.txtSaldoResultado = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtDeposito = new System.Windows.Forms.TextBox();
+            this.txtSaque = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,55 +97,55 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "SALDO:";
             // 
-            // textBox1
+            // txtNomeTitula
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textBox1.Location = new System.Drawing.Point(277, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 35);
-            this.textBox1.TabIndex = 5;
+            this.txtNomeTitula.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txtNomeTitula.Location = new System.Drawing.Point(277, 54);
+            this.txtNomeTitula.Name = "txtNomeTitula";
+            this.txtNomeTitula.Size = new System.Drawing.Size(199, 35);
+            this.txtNomeTitula.TabIndex = 5;
             // 
-            // textBox2
+            // txtNumConta
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textBox2.Location = new System.Drawing.Point(297, 100);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 35);
-            this.textBox2.TabIndex = 6;
+            this.txtNumConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txtNumConta.Location = new System.Drawing.Point(297, 100);
+            this.txtNumConta.Name = "txtNumConta";
+            this.txtNumConta.Size = new System.Drawing.Size(199, 35);
+            this.txtNumConta.TabIndex = 6;
             // 
-            // textBox3
+            // txtSaldo
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textBox3.Location = new System.Drawing.Point(130, 159);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(199, 35);
-            this.textBox3.TabIndex = 7;
+            this.txtSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txtSaldo.Location = new System.Drawing.Point(130, 159);
+            this.txtSaldo.Name = "txtSaldo";
+            this.txtSaldo.Size = new System.Drawing.Size(199, 35);
+            this.txtSaldo.TabIndex = 7;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.lblResultado);
             this.groupBox1.Location = new System.Drawing.Point(3, 223);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(609, 117);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
-            // label5
+            // lblResultado
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(9, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "l";
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.Location = new System.Drawing.Point(20, 16);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(9, 13);
+            this.lblResultado.TabIndex = 0;
+            this.lblResultado.Text = "l";
             // 
-            // textBox4
+            // txtSaldoResultado
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textBox4.Location = new System.Drawing.Point(130, 346);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(199, 35);
-            this.textBox4.TabIndex = 10;
+            this.txtSaldoResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txtSaldoResultado.Location = new System.Drawing.Point(130, 346);
+            this.txtSaldoResultado.Name = "txtSaldoResultado";
+            this.txtSaldoResultado.Size = new System.Drawing.Size(199, 35);
+            this.txtSaldoResultado.TabIndex = 10;
             // 
             // label6
             // 
@@ -179,37 +179,37 @@
             this.checkBox2.Text = "SAQUE";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // txtDeposito
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textBox5.Location = new System.Drawing.Point(183, 399);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(199, 35);
-            this.textBox5.TabIndex = 13;
+            this.txtDeposito.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txtDeposito.Location = new System.Drawing.Point(183, 399);
+            this.txtDeposito.Name = "txtDeposito";
+            this.txtDeposito.Size = new System.Drawing.Size(199, 35);
+            this.txtDeposito.TabIndex = 13;
             // 
-            // textBox6
+            // txtSaque
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textBox6.Location = new System.Drawing.Point(141, 440);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(199, 35);
-            this.textBox6.TabIndex = 14;
+            this.txtSaque.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txtSaque.Location = new System.Drawing.Point(141, 440);
+            this.txtSaque.Name = "txtSaque";
+            this.txtSaque.Size = new System.Drawing.Size(199, 35);
+            this.txtSaque.TabIndex = 14;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 595);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtSaque);
+            this.Controls.Add(this.txtDeposito);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtSaldoResultado);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSaldo);
+            this.Controls.Add(this.txtNumConta);
+            this.Controls.Add(this.txtNomeTitula);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -231,17 +231,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNomeTitula;
+        private System.Windows.Forms.TextBox txtNumConta;
+        private System.Windows.Forms.TextBox txtSaldo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label lblResultado;
+        private System.Windows.Forms.TextBox txtSaldoResultado;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtDeposito;
+        private System.Windows.Forms.TextBox txtSaque;
     }
 }
 
