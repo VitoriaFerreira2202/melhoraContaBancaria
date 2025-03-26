@@ -139,9 +139,8 @@
             this.lblResultado.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.lblResultado.Location = new System.Drawing.Point(20, 16);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(12, 18);
+            this.lblResultado.Size = new System.Drawing.Size(0, 18);
             this.lblResultado.TabIndex = 0;
-            this.lblResultado.Text = "l";
             // 
             // txtSaldoResultado
             // 

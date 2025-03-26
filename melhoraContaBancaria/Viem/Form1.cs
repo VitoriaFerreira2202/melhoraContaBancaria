@@ -39,7 +39,7 @@ namespace melhoraContaBancaria
         }
         private string PreparaResul(string saldo) 
         {
-            return $"NOME: {txtNomeTitula.Text}\nNUMERO DA CONTA: {txtNumConta.Text}\nSALDO:{saldo:C2}";
+            return $"NOME: {txtNomeTitula.Text}\nNUMERO DA CONTA: {txtNumConta.Text}\nSALDO: R${saldo:C2}";
         }
         private void checkBoxDepo_CheckedChanged(object sender, EventArgs e)
         {
@@ -65,6 +65,7 @@ namespace melhoraContaBancaria
             txtDeposito.Enabled = false;
             checkBoxDepo.Enabled = false;
             checkBoxSaque.Enabled = false;
+            btnCalc.Enabled = false;
         }
 
         public void Abilita() 
@@ -74,17 +75,27 @@ namespace melhoraContaBancaria
             txtDeposito.Enabled = true;
             checkBoxDepo.Enabled = true;
             checkBoxSaque.Enabled = true;
+            btnCalc.Enabled = true;
         }
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
             try
             {
-                controleconta.CalcSaque(txtSaque.Text);
-                controleconta.CalcDepo(txtDeposito.Text);
+                if (checkBoxDepo.Checked)
+                {
+                    txtSaldoResultado.Text = controleconta.CalcDepo(txtDeposito.Text); 
+
+
+                }
+                else 
+                {
+                    txtSaldoResultado.Text = controleconta.CalcSaque(txtSaque.Text);
+                }
+
+                txtDeposito.Text = "";
+                txtSaque.Text = "";
             }
-
-
             catch (ArgumentException ex) 
             {
                 MessageBox.Show(ex.Message);
